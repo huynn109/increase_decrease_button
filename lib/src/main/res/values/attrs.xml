@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="IncreaseDecreaseButton">
+        <attr name="initNumber" format="integer" />
+        <attr name="minNumber" format="integer" />
+        <attr name="maxNumber" format="integer" />
+        <attr name="activeIconColor" format="color" />
+        <attr name="inactiveIconColor" format="color" />
+        <attr name="textSizeNumber" format="dimension" />
+        <attr name="iconSize" format="dimension" />
+    </declare-styleable>
+</resources>

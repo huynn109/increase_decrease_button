@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/decreaseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:insetLeft="0dp"
+        android:insetRight="0dp"
+        style="@style/Widget.Material3.Button.TextButton.Icon"
+        app:icon="@drawable/increase_decrease_button_ic_decrease"
+        app:iconGravity="textEnd"
+        app:iconTint="@color/increase_decrease_lib_inactive"
+        app:iconSize="24dp" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvNumber"
+        android:textSize="18sp"
+        android:textColor="#FF7E2E"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="1"
+        android:background="@android:color/transparent"
+        android:gravity="center" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/increaseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:enabled="false"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:insetLeft="0dp"
+        android:insetRight="0dp"
+        style="@style/Widget.Material3.Button.TextButton.Icon"
+        app:icon="@drawable/increase_decrease_button_ic_increase"
+        app:iconGravity="textStart"
+        app:iconTint="#FF7E2E"
+        app:iconSize="24dp" />
+
+</LinearLayout>
