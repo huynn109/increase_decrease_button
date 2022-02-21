@@ -11,6 +11,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val btn = findViewById<IncreaseDecreaseButton>(R.id.inDeButton)
+        btn.initNumber(3)
+        btn.setMaxNumber(15)
+        btn.setMinNumber(2)
         btn.onChangeListener { number, isIncrease ->
             Toast.makeText(this.applicationContext, "$number", Toast.LENGTH_SHORT).show()
             Timber.d("onCreate: ${btn.getCurrentNumber()}")

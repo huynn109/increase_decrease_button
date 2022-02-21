@@ -11,7 +11,7 @@ import kotlin.properties.Delegates
 
 
 class IncreaseDecreaseButton @JvmOverloads constructor(
-    context: Context, private val attrs: AttributeSet? = null
+    context: Context, private val attrs: AttributeSet? = null,
 ) : LinearLayout(context, attrs) {
 
     private var iconSize: Float = 0.0f
@@ -86,6 +86,23 @@ class IncreaseDecreaseButton @JvmOverloads constructor(
         } else {
             enableButton(increaseButton)
         }
+    }
+
+    fun setMaxNumber(maxNumber: Int) {
+        if (maxNumber <= minNumber)
+            this.maxNumber = minNumber
+        else this.maxNumber = maxNumber
+    }
+
+    fun setMinNumber(minNumber: Int) {
+        if (maxNumber <= minNumber)
+            this.minNumber = maxNumber
+        else this.minNumber = minNumber
+    }
+
+    fun initNumber(initNumber: Int) {
+        this.initNumber = initNumber
+        bindViewRes()
     }
 
     private fun initViewId() {
