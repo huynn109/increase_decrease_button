@@ -6,7 +6,7 @@
 
 ## Screenshot
 
-<img src="">
+<img src="https://github.com/huynn109/increase_decrease_button/blob/master/screenshot/pic.png">
 
 ## Download
 [![](https://jitpack.io/v/huynn109/increase_decrease_button.svg)](https://jitpack.io/#huynn109/increase_decrease_button)
