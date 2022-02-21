@@ -25,7 +25,7 @@ class IncreaseDecreaseButton @JvmOverloads constructor(
     private var decreaseButton: MaterialButton? = null
     private var textViewNumber: MaterialTextView? = null
     private var currentNumber = 0
-    private var onChangeListener: ((number: Int) -> Unit)? = null
+    private var onChangeListener: ((number: Int, isIncrease: Boolean) -> Unit)? = null
 
     init {
         initView()
@@ -41,14 +41,14 @@ class IncreaseDecreaseButton @JvmOverloads constructor(
 
     private fun initEvent() {
         increaseButton?.setOnClickListener {
-            handleOnNumber(++currentNumber)
+            handleOnNumber(++currentNumber, isIncrease = true)
         }
         decreaseButton?.setOnClickListener {
-            handleOnNumber(--currentNumber)
+            handleOnNumber(--currentNumber, isIncrease = false)
         }
     }
 
-    fun onChangeListener(onChangeListener: ((number: Int) -> Unit)?) {
+    fun onChangeListener(onChangeListener: ((number: Int, isIncrease: Boolean) -> Unit)?) {
         this.onChangeListener = onChangeListener
     }
 
@@ -61,11 +61,11 @@ class IncreaseDecreaseButton @JvmOverloads constructor(
         handleViewDecreaseButton()
     }
 
-    private fun handleOnNumber(currentNumber: Int) {
+    private fun handleOnNumber(currentNumber: Int, isIncrease: Boolean) {
         handleViewIncreaseButton()
         handleViewDecreaseButton()
         handleCurrentNumber(currentNumber)
-        onChangeListener?.invoke(currentNumber)
+        onChangeListener?.invoke(currentNumber, isIncrease)
     }
 
     private fun handleCurrentNumber(number: Int) {
