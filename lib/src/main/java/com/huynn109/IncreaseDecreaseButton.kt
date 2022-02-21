@@ -92,12 +92,35 @@ class IncreaseDecreaseButton @JvmOverloads constructor(
         if (maxNumber <= minNumber)
             this.maxNumber = minNumber
         else this.maxNumber = maxNumber
+        handleButtonView()
+    }
+
+    private fun handleButtonView() {
+        handleViewIncreaseButton()
+        handleViewDecreaseButton()
+    }
+
+    fun disableDecrease() {
+        disableButton(decreaseButton)
+    }
+
+    fun enableDecrease() {
+        enableButton(decreaseButton)
+    }
+
+    fun disableIncrease() {
+        disableButton(increaseButton)
+    }
+
+    fun enableIncrease() {
+        enableButton(increaseButton)
     }
 
     fun setMinNumber(minNumber: Int) {
         if (maxNumber <= minNumber)
             this.minNumber = maxNumber
         else this.minNumber = minNumber
+        handleButtonView()
     }
 
     fun initNumber(initNumber: Int) {
